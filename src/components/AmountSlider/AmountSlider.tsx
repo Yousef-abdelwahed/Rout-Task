@@ -27,18 +27,23 @@ const AmountSlider = ({ setFilter, filter }) => {
       );
       setMinAmount(min);
       setMaxAmount(max);
-      setFilter((filter) => ({ ...filter, amountRange: [0, max] }));
+      setFilter((filter) => ({ ...filter, amountRange: [minAmount, max] }));
     }
   }, [transactions]);
 
   return (
     <>
-      <Flex direction="column" align="center" w="50%" mx="auto" mb={8}>
+      <Flex
+        direction="column"
+        align="center"
+        w={{ base: "100%", lg: "50%" }}
+        mx="auto"
+        mb={8}
+      >
         <Box w="full">
           <label className="my-4 inline-block">Filter by amount range:</label>
           <RangeSlider
             aria-label={["min", "max"]}
-            defaultValue={[0, 5000]}
             min={minAmount}
             max={maxAmount}
             step={100}

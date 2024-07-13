@@ -2,7 +2,7 @@ import { Input } from '@chakra-ui/react';
 import React from 'react';
 
 const Inputs = ({ id,label, placeholder, type, name, value, onChange, onBlur, error }) => (
-  <div className="px-4 w-[50%] mx-auto">
+  <div className="px-4 w-[50%] max-lg:w-full mx-auto">
    <label htmlFor={label} className='my-4 inline-block'>{label}</label>
     <Input
       id={id}

@@ -29,30 +29,30 @@ const Home = () => {
     setSelectedCustomer(id);
     setIsModalOpen(true);
 
-    console.log(transactions.filter(t => t.customer_id == selectedCustomer))
+    (transactions.filter(t => t.customer_id == selectedCustomer))
   }
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
   return (
-    <main className='transaction__container w-[80%] mx-auto'>
+    <main className='transaction__container w-[80%] mx-auto '>
       <ToggleDarkModeButton />
       <section className='table__section'>
     
 
-        <Box  px={8} as="header" className='filter-filed flex  my-8 ' >
-          <div className='w-1/2  flex justify-center items-center'>
-           <h1 className='font-bold text-4xl text-primary'>Transitions </h1>
+        <Box  px={8} as="header" className='filter-filed flex  my-8 max-lg:flex-col mx-auto gap-8 ' >
+          <div className='w-1/2  flex justify-center items-center text-center mx-auto'>
+           <h1 className='font-bold text-4xl text-primary text-center '>Transitions </h1>
             
           </div>
-          <div className='scale-div  flex justify-between gap-8 border rounded-xl shadow-sm px-8  '>
+          <div className='scale-div  flex max-lg:flex-col justify-between gap-8 border rounded-xl shadow-sm px-8  '>
             
         <Inputs
             id="name"
             label="Filter by name"
             type="text"
             name="name"
-            placeholder="please enter customer name "
+            placeholder="Enter customer name  "
             value={filter.name}
             onChange={handleFilterChange}
           />

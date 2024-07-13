@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const TransactionChart = ({ transactions }) => {
-    console.log(transactions)
+    (transactions)
   return (
     <div style={{ width: '100%', height: 400 }}>
       <h2 className='mx-auto text-3xl font-semibold text-center'>Transaction Chart</h2>
