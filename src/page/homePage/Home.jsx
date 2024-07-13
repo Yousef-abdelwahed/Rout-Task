@@ -62,6 +62,7 @@ const Home = () => {
         <Box >
           <TableComponent handleCustomerSelect={handleCustomerSelect} filteredCustomers={filteredCustomers} amountRange={filter.amountRange} />
         </Box>
+      </section>
         {selectedCustomer && 
           <ChartModal 
           isOpen={isModalOpen}
@@ -71,7 +72,6 @@ const Home = () => {
           transactionsCustomer={transactions.filter(t => t.customer_id == selectedCustomer)} 
           />
         }
-      </section>
     </main>
   );
 };
